@@ -37,7 +37,7 @@ function App() {
 
   console.log("states are:", accountType, authenticate, userToken);
   useEffect(() => {
-    fetch("/isAuthenticated")
+    fetch("https://159.203.29.156:443/isAuthenticated")
       .then((res) => {
         if (res.ok) {
           return res.json();

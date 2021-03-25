@@ -3,7 +3,6 @@
   "name": "eng4000",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://159.203.29.156:443/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
