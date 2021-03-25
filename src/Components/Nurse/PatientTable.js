@@ -343,7 +343,9 @@ export default function EnhancedTable(props) {
     if (selected.length > 0) {
       setTimeout(function () {
         //your code to be executed after 1 second
-        history.push(`/nurse/${patientName}/${patientId}/${patientRoom}`);
+        history.push(
+          `/medmemo/nurse/${patientName}/${patientId}/${patientRoom}`
+        );
       }, 1000);
     }
   });
@@ -428,7 +430,7 @@ export default function EnhancedTable(props) {
                         <TableCell align="center">
                           <Link
                             to={{
-                              pathname: `/nurse/SBARHistory/${patient.patient_name}`,
+                              pathname: `/medmemo/nurse/SBARHistory/${patient.patient_name}`,
                               patientName: patient.patient_name,
                               patientId: patient.note_patient_id,
                               roomId: patient.patient_room_id,

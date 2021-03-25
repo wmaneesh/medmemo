@@ -51,14 +51,14 @@ const NursePage = (props) => {
         setAuthenticate={props.setAuthenticate}
       />
       <Switch>
-        <Route exact path="/nurse">
+        <Route exact path="/medmemo//nurse">
           <Header title={`Hi ${nurseName}`} />
           <MuiThemeProvider theme={theme}>
             <PatientTable search={props.search} nurseId={nurseId} />
           </MuiThemeProvider>
         </Route>
 
-        <Route path="/nurse/SBARhistory/:patientName">
+        <Route path="/medmemo//nurse/SBARhistory/:patientName">
           <Header title={`SBAR History of ${props.location.patientName}`} />
           <MuiThemeProvider theme={theme}>
             <div className="historyContainer">
@@ -77,7 +77,7 @@ const NursePage = (props) => {
           </MuiThemeProvider>
         </Route>
 
-        <Route exact path="/nurse/contactPhysician">
+        <Route exact path="/medmemo//nurse/contactPhysician">
           {/* ------------------ Temporarily routed here -------------------------*/}
           <ContactPhysicanCard
             pname="Dr. Geneva"
@@ -89,11 +89,11 @@ const NursePage = (props) => {
           <CreatePatient />
         </Route> */}
 
-        <Route exact path="/nurse/:patientName/:patientId/:roomId">
+        <Route exact path="/medmemo//nurse/:patientName/:patientId/:roomId">
           <Sbar nurseId={nurseId} nurseName={nurseName} />
         </Route>
 
-        <Route path="/nurse/viewSBAR">
+        <Route path="/medmemo//nurse/viewSBAR">
           <ViewSbar
             nurseName={props.location.nurseName}
             patientId={props.location.patientId}

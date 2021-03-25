@@ -44,7 +44,7 @@ const ProtectedRouteNurse = ({
         ) : (
           <Redirect
             to={{
-              pathname: "/",
+              pathname: "/medmemo/",
               state: { from: props.location },
             }}
           />
