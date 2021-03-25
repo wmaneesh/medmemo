@@ -117,7 +117,6 @@ function App() {
               availability="Away on vacation"
             />
             <ProtectedLogin
-              exact
               path="/"
               component={Login}
               authenticate={authenticate}
