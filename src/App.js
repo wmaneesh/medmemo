@@ -85,7 +85,7 @@ function App() {
         {accountType !== "" ? (
           <Switch>
             <ProtectedRoute
-              path="/nurse"
+              path="medmemo/nurse"
               component={NursePage}
               search={search}
               setSearch={setSearch}
