@@ -11,7 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   // <NursePage />,
   <React.StrictMode>
-    <Router basename="/">
+    <Router basename="">
       <App />
     </Router>
   </React.StrictMode>,
