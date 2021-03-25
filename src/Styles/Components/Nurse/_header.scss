@@ -1,0 +1,20 @@
+.nurse__title {
+  position: relative;
+  font-size: 2rem;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .nurse__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .nurse__title {
+    font-size: 1.2rem;
+  }
+}

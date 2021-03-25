@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin-button {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+  justify-content: center;
+}
+
+.admin-table {
+  width: 100%;
+  margin-top: -15rem;
+}
