@@ -52,7 +52,7 @@ function App() {
           setUserToken(result.user);
         } else {
           setAuthenticate(false);
-          setAccountType("/");
+          setAccountType("/medmemo/");
           setUserToken("");
         }
       });
