@@ -40,7 +40,7 @@ export default function CreatePatient(props) {
   };
 
   const handleSubmit = (data) => {
-    fetch(`/admin/addPatient`, {
+    fetch(`https://159.203.29.156/admin/addPatient`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

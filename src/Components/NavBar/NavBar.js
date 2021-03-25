@@ -1,5 +1,5 @@
-import React, { useState} from "react";
-import { useHistory} from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,7 +27,7 @@ const NavBar = (props) => {
   };
 
   const handleLogout = () => {
-    fetch("/login/logout").then((res) => {
+    fetch("https://159.203.29.156/login/logout").then((res) => {
       if (res.ok) {
         history.push("/");
         return res.json();

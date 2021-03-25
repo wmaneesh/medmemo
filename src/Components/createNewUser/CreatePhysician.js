@@ -43,7 +43,7 @@ class CreatePatient extends React.Component {
 
   handleSubmit = (data) => {
     console.log("feth is called?");
-    fetch(`/admin/addPhysician`, {
+    fetch(`https://159.203.29.156/admin/addPhysician`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

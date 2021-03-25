@@ -252,7 +252,7 @@ export default function EnhancedTable(props) {
 
   useEffect(() => {
     console.log(props.nurseId, props.patientId);
-    fetch(`/nurse/SBARHistory/${props.patientId}`)
+    fetch(`https://159.203.29.156/nurse/SBARHistory/${props.patientId}`)
       .then((res) => {
         if (res.ok) {
           return res.json();

@@ -32,7 +32,7 @@ class UnlockAccounts extends React.Component {
 
   handleSubmit = (data) => {
     console.log("etch is called");
-    fetch(`/admin/unlockAccount`, {
+    fetch(`https://159.203.29.156/admin/unlockAccount`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

@@ -272,7 +272,7 @@ export default function EnhancedTable(props) {
 
   useEffect(() => {
     if (props.search === "") {
-      fetch(`/nurse/viewPatients/1`)
+      fetch(`https://159.203.29.156/nurse/viewPatients/1`)
         .then((res) => {
           if (res.ok) {
             return res.json();
@@ -429,14 +429,11 @@ export default function EnhancedTable(props) {
                         <TableCell align="right">
                           {patients.update_status}
                         </TableCell>
+                        <TableCell align="right">{patients.nurse}</TableCell>
                         <TableCell align="right">
-                        {patients.nurse}
-                        </TableCell>
-                        <TableCell align="right">
-                        <Button variant="contained" color="primary">
+                          <Button variant="contained" color="primary">
                             View SBAR History
                           </Button>
-                        
                         </TableCell>
                       </TableRow>
                     );
