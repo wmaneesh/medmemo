@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {accountType !== "" ? (
+        {accountType !== "fd" ? (
           <Switch>
             <ProtectedRoute
               path="/nurse"
