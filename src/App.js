@@ -47,7 +47,7 @@ function App() {
       })
       .then((result) => {
         if (result !== "") {
-          setAccountType(result.path);
+          setAccountType(`/medmemo${result.path}`);
           setAuthenticate(true);
           setUserToken(result.user);
         } else {
@@ -95,7 +95,7 @@ function App() {
               userToken={userToken}
             />
             <ProtectedRoute
-              path="/physician"
+              path="/medmemo/physician"
               component={Physician}
               search={search}
               setSearch={setSearch}
@@ -105,7 +105,7 @@ function App() {
               userToken={userToken}
             />
             <ProtectedRoute
-              path="/admin"
+              path="/medmemo/admin"
               component={Admin}
               search={search}
               setSearch={setSearch}
