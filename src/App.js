@@ -35,7 +35,7 @@ function App() {
   const [userToken, setUserToken] = useState("");
 
   useEffect(() => {
-    fetch("//159.203.29.156:443/isAuthenticated")
+    fetch("/isAuthenticated")
       .then((res) => {
         if (res.ok) {
           return res.json();
