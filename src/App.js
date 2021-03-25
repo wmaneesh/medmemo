@@ -30,7 +30,7 @@ import Admin from "./Components/Admin/Admin.js";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [accountType, setAccountType] = useState("");
+  const [accountType, setAccountType] = useState("/");
   const [authenticate, setAuthenticate] = useState(false);
   const [userToken, setUserToken] = useState("");
   //"proxy": "https://159.203.29.156:443",
@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {accountType !== "fd" ? (
+        {accountType !== "" ? (
           <Switch>
             <ProtectedRoute
               path="/nurse"
