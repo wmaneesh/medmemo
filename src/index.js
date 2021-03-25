@@ -11,7 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   // <NursePage />,
   <React.StrictMode>
-    <Router>
+    <Router path={process.env.PUBLIC_URL + "/"}>
       <App />
     </Router>
   </React.StrictMode>,
