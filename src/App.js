@@ -34,6 +34,8 @@ function App() {
   const [authenticate, setAuthenticate] = useState(false);
   const [userToken, setUserToken] = useState("");
   //"proxy": "https://159.203.29.156:443",
+
+  console.log("states are:", accountType, authenticate, userToken);
   useEffect(() => {
     fetch("https://159.203.29.156:443/isAuthenticated")
       .then((res) => {
