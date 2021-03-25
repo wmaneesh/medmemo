@@ -45,7 +45,7 @@ const Login = (props) => {
         if (result.user_type === undefined) {
           setStatusMessage(result);
         } else {
-          props.setAccountType(`/${result.user_type}`);
+          props.setAccountType(`/medmemo/${result.user_type}`);
           props.setAuthenticate(true);
           props.setUserToken(token);
         }
