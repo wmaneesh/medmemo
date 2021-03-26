@@ -15,7 +15,7 @@ function Assessment(props) {
 
   return (
     <div className="paper-situation">
-    <div className="assessment">A</div>
+      <div className="assessment">A</div>
       <Paper className={paperstyle.pageContent} elevation={5}>
         <Grid container>
           <Grid item xs={12}>
@@ -28,7 +28,7 @@ function Assessment(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <InputLabel style={{ width: "100%" }}>
-              The problem seems to be:
+              The problem seems to be related to:
             </InputLabel>
           </Grid>
           <Grid item lg={4} xl={2}>
@@ -40,14 +40,14 @@ function Assessment(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <Checkbox
-              label="Infection"
+              label="Infections"
               name="a_problem_infection"
               defaultValue={props.assessment.a_problem_infection}
             ></Checkbox>
           </Grid>
           <Grid item lg={4} xl={2}>
             <Checkbox
-              label="Neurologic"
+              label="Neurological"
               name="a_problem_neurologic"
               defaultdefaultValue={props.assessment.a_problem_neurologic}
             ></Checkbox>
@@ -84,6 +84,6 @@ function Assessment(props) {
       </Paper>
     </div>
   );
-};
+}
 
 export default Assessment;

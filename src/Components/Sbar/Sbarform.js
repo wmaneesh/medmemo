@@ -63,8 +63,8 @@ const recommendation = {
   r_patient_family_code_status: false,
   r_test_needed: "",
   r_freq_vital_signs: "",
-  r_time_problem_will_last: false,
-  r_problem_persist_contact: false,
+  r_time_problem_will_last: "",
+  r_problem_persist_contact: "",
 };
 
 export default function Sbarform(props) {

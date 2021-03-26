@@ -31,7 +31,7 @@ function Recommendation(props) {
               label="Priority scale"
               name="r_priority"
               defaultValue={props.recommendation.r_priority}
-              text="Priority of the condition from a scale of 1-3, 1 being the least and 3 being the most "
+              text="Priority of the condition from a scale of 1-3: 1 being the least and 3 being the most "
             ></Inputgroup>
           </Grid12>
           <Grid12>
@@ -65,18 +65,18 @@ function Recommendation(props) {
             ></Inputgroup>
           </Grid12>
           <Grid12>
-            <Checkbox
+            <Inputgroup
               label="How long do you expect this problem will last?"
               name="r_time_problem_will_last"
               defaultValue={props.recommendation.r_time_problem_will_last}
-            ></Checkbox>
+            ></Inputgroup>
           </Grid12>
           <Grid12>
-            <Checkbox
+            <Inputgroup
               label="If the patient does not get better when would you want us to call again?"
               name="r_problem_persist_contact"
               defaultValue={props.recommendation.r_problem_persist_contact}
-            ></Checkbox>
+            ></Inputgroup>
           </Grid12>
         </Grid>
       </Paper>

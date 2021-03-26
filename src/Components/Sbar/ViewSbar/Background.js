@@ -41,7 +41,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="non-cooperative, agitated or combative."
+              label="Non-cooperative, agitated or combative."
               name="b_awareness_non_coop_agit_combative"
               defaultValue={
                 props.background.b_awareness_non_coop_agit_combative
@@ -126,7 +126,7 @@ function Background(props) {
               text="The patient has been on "
             ></Inputgroup>
             <Inputgroup
-              label="(hours)"
+              label="(minutes)"
               name="b_o2_time"
               defaultValue={props.background.b_o2_time}
               text="For how long:"
