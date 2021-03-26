@@ -43,7 +43,7 @@ const Admin = (props) => {
         setAuthenticate={props.setAuthenticate}
       />
       <Switch>
-        <Route exact path="/admin">
+        <Route exact path="/medmemo/admin">
           <section className="page">
             <div className="admin-button">
               <DashboardButton title="Patient" count="200" />
@@ -60,19 +60,19 @@ const Admin = (props) => {
           </section>
         </Route>
         <MuiThemeProvider theme={theme}>
-          <Route exact path="/admin/Patient">
+          <Route exact path="/medmemo/admin/Patient">
             <CreatePatient />
           </Route>
 
-          <Route exact path="/admin/Nurse">
+          <Route exact path="/medmemo/admin/Nurse">
             <CreateNurse />
           </Route>
 
-          <Route exact path="/admin/Physician">
+          <Route exact path="/medmemo/admin/Physician">
             <CreatePhysician />
           </Route>
 
-          <Route exact path="/admin/unlock">
+          <Route exact path="/medmemo/admin/unlock">
             <UnlockAccount />
           </Route>
         </MuiThemeProvider>
