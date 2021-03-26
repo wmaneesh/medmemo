@@ -8,6 +8,7 @@ import {
   faSearch,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const [open, setOpen] = useState(false);
@@ -27,6 +28,7 @@ const NavBar = (props) => {
   };
 
   const handleLogout = () => {
+    console.log("logout is being called");
     fetch("https://159.203.29.156/login/logout").then((res) => {
       if (res.ok) {
         history.push("/medmemo/");
@@ -42,9 +44,9 @@ const NavBar = (props) => {
   return (
     <header className="main-navbar">
       <div className="navbar-contents">
-        <a href="/">
+        <Link to="/medmemo/">
           <FontAwesomeIcon className="logo fa-2x" icon={faClinicMedical} />
-        </a>
+        </Link>
         <a className="search-icon">
           <input
             type="search"

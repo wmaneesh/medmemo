@@ -8,7 +8,6 @@ const ProtectedLogin = ({
   accountType,
   ...rest
 }) => {
-  console.log("im in protected routes");
   return (
     <Route
       {...rest}
