@@ -72,7 +72,7 @@ function Situation(props) {
           </Grid12>
           <Grid item lg={4} xl={4}>
             <InputLabel style={{ width: "100%" }}>
-              I have assessed the patient personaly. Vital signs are:
+              I have assessed the patient personally. Vital signs are:
             </InputLabel>
           </Grid>
           <Grid item lg={4} xl={2}>

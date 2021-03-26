@@ -31,7 +31,7 @@ function Recommendation(props) {
               label="Priority scale"
               name="r_priority"
               defaultValue={props.recommendation.r_priority}
-              text="Priority of the condition from a scale of 1-3: 1 being the least and 3 being the most "
+              text="Priority of the condition from a scale of 1-3: 1 being the lowest and 3 being the highest. "
             ></Inputgroup>
           </Grid12>
           <Grid12>
