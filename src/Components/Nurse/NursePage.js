@@ -53,7 +53,7 @@ const NursePage = (props) => {
         setAuthenticate={props.setAuthenticate}
       />
       <Switch>
-        <Route exact path="/medmemo//nurse">
+        <Route exact path="/medmemo/nurse">
           <Header title={`Hi ${nurseName}`} />
           <MuiThemeProvider theme={theme}>
             <PatientTable search={props.search} nurseId={nurseId} />
