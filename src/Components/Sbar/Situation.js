@@ -156,7 +156,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="O2 Sat because it is <90% despite oxygen."
+              label="O2 Sat because it is <90% despite oxygen given."
               name="s_concern_o2"
               value={props.situation.s_concern_o2}
               onBlur={props.handleInput}
