@@ -28,6 +28,7 @@ const Login = (props) => {
   const handleLogin = () => {
     fetch("https://159.203.29.156/login", {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
