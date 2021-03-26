@@ -49,7 +49,10 @@ const DashboardButton = (props) => {
 
   return (
     <div className="adminDashboardButtonContainer">
-      <Link to={`/admin/${props.title}`} style={{ textDecoration: "none" }}>
+      <Link
+        to={`/medmemo/admin/${props.title}`}
+        style={{ textDecoration: "none" }}
+      >
         <div
           className="adminbuttonContainer"
           style={{ backgroundColor: `${color}` }}
