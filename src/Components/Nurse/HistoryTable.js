@@ -365,7 +365,7 @@ export default function EnhancedTable(props) {
                         <TableCell align="center">
                           <Link
                             to={{
-                              pathname: "/nurse/viewSBAR",
+                              pathname: "/medmemo/nurse/viewSBAR",
                               patientName:
                                 patients.sbar_note_archive_patient_name,
                               nurseName: patients.nurse_name,

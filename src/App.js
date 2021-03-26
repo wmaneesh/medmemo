@@ -36,7 +36,7 @@ function App() {
   //"proxy": "https://159.203.29.156:443",
 
   useEffect(() => {
-    fetch("https://159.203.29.156/isAuthenticated", {
+    fetch("https://server.wmaneesh.com/isAuthenticated", {
       credentials: "include",
     })
       .then((res) => {
