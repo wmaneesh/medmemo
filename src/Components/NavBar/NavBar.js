@@ -29,7 +29,7 @@ const NavBar = (props) => {
   const handleLogout = () => {
     fetch("https://159.203.29.156/login/logout").then((res) => {
       if (res.ok) {
-        history.push("/");
+        history.push("/medmemo/");
         return res.json();
       } else {
         console.log("logout was unsuccessfull");
