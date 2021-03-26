@@ -72,7 +72,7 @@ function Situation(props) {
           </Grid12>
           <Grid item lg={4} xl={4}>
             <InputLabel style={{ width: "100%" }}>
-              I have assessed the patient personaly: Vital signs are:
+              I have assessed the patient personaly. Vital signs are:
             </InputLabel>
           </Grid>
           <Grid item lg={4} xl={2}>
@@ -132,7 +132,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Pulse because it is over 125 or less than 45."
+              label="Pulse because it is over 125 or less than 45 per minute."
               name="s_concern_pulse"
               value={props.situation.s_concern_pulse}
               onBlur={props.handleInput}
@@ -140,7 +140,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Respiration because it is less than 10 or over 30."
+              label="Respiration because it is less than 10 or over 30 breaths per minute."
               name="s_concern_respiration"
               value={props.situation.s_concern_respiration}
               onBlur={props.handleInput}
@@ -148,7 +148,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Temperature because it is less than 96 or over 104."
+              label="Temperature because it is less than 34 or over 40 celsius degrees."
               name="s_concern_temperature"
               value={props.situation.s_concern_temperature}
               onBlur={props.handleInput}

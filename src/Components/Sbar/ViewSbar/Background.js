@@ -41,7 +41,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Non-cooperative, agitated or combative."
+              label="Non-cooperative, agitated, or combative."
               name="b_awareness_non_coop_agit_combative"
               defaultValue={
                 props.background.b_awareness_non_coop_agit_combative
@@ -99,14 +99,14 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={4}>
             <Checkbox
-              label="Extremities are cold"
+              label="Extremely Cold"
               name="b_skin_extremities_cold"
               defaultValue={props.background.b_skin_extremities_cold}
             ></Checkbox>
           </Grid>
           <Grid item xs={12} md={4}>
             <Checkbox
-              label="Extremities are warm"
+              label="Extremely warm"
               name="b_skin_extremities_warm"
               defaultValue={props.background.b_skin_extremities_warm}
             ></Checkbox>
@@ -129,12 +129,12 @@ function Background(props) {
               label="(minutes)"
               name="b_o2_time"
               defaultValue={props.background.b_o2_time}
-              text="For how long:"
+              text="For:"
             ></Inputgroup>
           </Grid12>
           <Grid12>
             <Checkbox
-              label="The oximeter does not detect a good puslse and is giving erratic readings."
+              label="The oximeter does not detect a good pulse and is giving erratic readings."
               name="b_oximeter_detection"
               defaultValue={props.background.b_oximeter_detection}
             ></Checkbox>

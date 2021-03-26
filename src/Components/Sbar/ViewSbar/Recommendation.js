@@ -43,7 +43,7 @@ function Recommendation(props) {
           </Grid12>
           <Grid12>
             <Inputgroup
-              label="CXR, ABG, EKG, CBC, or BMP"
+              label="CXR, ABG, EKG, CBC, BMP etc"
               name="r_test_needed"
               defaultValue={props.recommendation.r_test_needed}
               text="Are any tests needed:"
