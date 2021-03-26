@@ -29,7 +29,9 @@ const NavBar = (props) => {
 
   const handleLogout = () => {
     console.log("logout is being called");
-    fetch("https://159.203.29.156/login/logout").then((res) => {
+    fetch("https://159.203.29.156/login/logout", {
+      credentials: "include",
+    }).then((res) => {
       if (res.ok) {
         history.push("/medmemo/");
         return res.json();

@@ -271,7 +271,9 @@ export default function EnhancedTable() {
   ]);
 
   useEffect(() => {
-    fetch(`https://159.203.29.156/nurse/viewPatients/1`)
+    fetch(`https://159.203.29.156/nurse/viewPatients/1`, {
+      credentials: "include",
+    })
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -331,7 +333,7 @@ export default function EnhancedTable() {
     if (selected.length > 0) {
       setTimeout(function () {
         //your code to be executed after 1 second
-        history.push(`/nurse/${patientName}`);
+        history.push(`/medmemo/nurse/${patientName}`);
       }, 1000);
     }
   });
