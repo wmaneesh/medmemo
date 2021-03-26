@@ -77,7 +77,7 @@ function Situation(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <TextFieldSingle
-              label="Blood Pressure"
+              label="Blood Pressure (mmHg)"
               name="s_BP"
               value={props.situation.s_BP}
               onBlur={props.handleInput}
@@ -85,7 +85,7 @@ function Situation(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <TextFieldSingle
-              label="Pulse"
+              label="Pulse (bpm)"
               name="s_pulse"
               value={props.situation.s_pulse}
               onBlur={props.handleInput}
@@ -93,7 +93,7 @@ function Situation(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <TextFieldSingle
-              label="Respiration"
+              label="Respiration (breaths/min)"
               name="s_respiration"
               value={props.situation.s_respiration}
               onBlur={props.handleInput}
@@ -101,7 +101,7 @@ function Situation(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <TextFieldSingle
-              label="Temperature"
+              label="Temperature (celcius)"
               name="s_temperature"
               value={props.situation.s_temperature}
               onBlur={props.handleInput}
@@ -109,7 +109,7 @@ function Situation(props) {
           </Grid>
           <Grid item lg={4} xl={3}>
             <TextFieldSingle
-              label="O2 sat"
+              label="O2 sat (%)"
               name="s_o2"
               value={props.situation.s_o2}
               onBlur={props.handleInput}
