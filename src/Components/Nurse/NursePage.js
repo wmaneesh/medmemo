@@ -27,7 +27,9 @@ const NursePage = (props) => {
 
   useEffect(() => {
     // setNurseId(props.userToken);
-    fetch(`https://159.203.29.156/nurse/getId/${props.userToken}`)
+    fetch(`https://159.203.29.156/nurse/getId/${props.userToken}`, {
+      credentials: "include",
+    })
       .then((res) => {
         if (res.ok) {
           return res.json();

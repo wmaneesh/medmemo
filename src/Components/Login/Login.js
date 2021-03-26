@@ -29,6 +29,7 @@ const Login = (props) => {
     fetch("https://159.203.29.156/login", {
       method: "POST",
       credentials: "include",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
