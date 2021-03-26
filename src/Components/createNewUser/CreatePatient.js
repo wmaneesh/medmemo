@@ -40,7 +40,7 @@ export default function CreatePatient(props) {
   };
 
   const handleSubmit = (data) => {
-    fetch(`https://159.203.29.156/admin/addPatient`, {
+    fetch(`https://server.wmaneesh.com/admin/addPatient`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -181,7 +181,7 @@ export default function CreatePatient(props) {
                 </div>
                 <div className="buttons-cancel">
                   <Button variant="contained" color="secondary">
-                    <Link to="/admin" className="Button-text cancBut">
+                    <Link to="/medmemo/admin" className="Button-text cancBut">
                       Cancel
                     </Link>
                   </Button>

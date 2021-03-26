@@ -58,7 +58,7 @@ function SubmitDone(props) {
           style={{ margin: "1rem" }}
         >
           {props.status ? (
-            <Link to={"/"}>
+            <Link to={"/medmemo/"}>
               <Button
                 color="primary"
                 variant="contained"

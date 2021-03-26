@@ -66,7 +66,7 @@ function ResetPasswordModal(props) {
   };
 
   const handleTokenCheck = (event) => {
-    fetch(`/login/tokenExists/${event.target.value}`)
+    fetch(`https://server.wmaneesh.com/login/tokenExists/${event.target.value}`)
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -87,7 +87,7 @@ function ResetPasswordModal(props) {
 
   const handleReset = (event) => {
     console.log(token, newPassword);
-    fetch(`/login/resetPassword`, {
+    fetch(`https://server.wmaneesh.com/login/resetPassword`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

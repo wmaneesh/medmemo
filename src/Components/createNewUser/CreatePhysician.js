@@ -43,7 +43,7 @@ class CreatePatient extends React.Component {
 
   handleSubmit = (data) => {
     console.log("feth is called?");
-    fetch(`https://159.203.29.156/admin/addPhysician`, {
+    fetch(`https://server.wmaneesh.com/admin/addPhysician`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -134,7 +134,7 @@ class CreatePatient extends React.Component {
                   </div>
                   <div className="buttons-cancel">
                     <Button variant="contained" color="secondary">
-                      <Link to="/admin" className="Button-text cancBut">
+                      <Link to="/medmemo/admin" className="Button-text cancBut">
                         Cancel
                       </Link>
                     </Button>

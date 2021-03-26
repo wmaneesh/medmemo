@@ -271,7 +271,7 @@ export default function EnhancedTable() {
   ]);
 
   useEffect(() => {
-    fetch(`https://159.203.29.156/nurse/viewPatients/1`, {
+    fetch(`https://server.wmaneesh.com/nurse/viewPatients/1`, {
       credentials: "include",
     })
       .then((res) => {

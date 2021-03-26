@@ -99,7 +99,9 @@ export default function ViewSbarForm(props) {
 
   useEffect(() => {
     console.log(props.dateCreated, props.patientId);
-    fetch(`/nurse/getSBARHistoryFields/${props.dateCreated}/${props.patientId}`)
+    fetch(
+      `https://server.wmaneesh.com/nurse/getSBARHistoryFields/${props.dateCreated}/${props.patientId}`
+    )
       .then((res) => {
         if (res.ok) {
           return res.json();

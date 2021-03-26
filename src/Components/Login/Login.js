@@ -26,7 +26,7 @@ const Login = (props) => {
   };
 
   const handleLogin = () => {
-    fetch("https://159.203.29.156/login", {
+    fetch("https://server.wmaneesh.com/login", {
       method: "POST",
       credentials: "include",
       headers: {

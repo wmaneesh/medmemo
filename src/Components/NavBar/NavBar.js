@@ -29,7 +29,7 @@ const NavBar = (props) => {
 
   const handleLogout = () => {
     console.log("logout is being called");
-    fetch("https://159.203.29.156/login/logout", {
+    fetch("https://server.wmaneesh.com/login/logout", {
       credentials: "include",
     }).then((res) => {
       if (res.ok) {

@@ -12,12 +12,12 @@ const ProtectedRoutePhysician = ({
     <Route
       {...rest}
       render={(props) =>
-        authenticate & (account_type === "/physician") ? (
+        authenticate & (account_type === "/medmemo/physician") ? (
           <Component {...props} {...rest} />
         ) : (
           <Redirect
             to={{
-              pathname: "/",
+              pathname: "/medmemo/",
               state: { from: props.location },
             }}
           />
