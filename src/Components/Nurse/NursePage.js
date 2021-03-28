@@ -8,6 +8,7 @@ import Sbar from "../Sbar/Sbar.js";
 // import CreatePatient from "../CreatePatient/CreatePatient.js";
 import ContactPhysicanCard from "./ContactPhysicianCard.js";
 import HistoryTable from "./HistoryTable.js";
+import DialogTest from "./notify/DialogBox";
 
 import { Button, createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
 
@@ -24,6 +25,7 @@ const theme = createMuiTheme({
 const NursePage = (props) => {
   const [nurseId, setNurseId] = useState("");
   const [nurseName, setNurseName] = useState("");
+  const [showDialog, setShowDialog] = useState(false);
 
   useEffect(() => {
     // setNurseId(props.userToken);
@@ -44,6 +46,10 @@ const NursePage = (props) => {
         }
       });
   }, [props]);
+
+  function handleDialogChange(e) {
+    setShowDialog(e);
+  }
 
   return (
     <div>
@@ -71,25 +77,21 @@ const NursePage = (props) => {
                 patientId={props.location.patientId}
               />
               <ContactPhysicanCard
-                pname="Dr. Geneva"
-                specialty="Neurology"
-                availability="Away on vacation"
+                patientId={props.location.patientId}
+                patientName={props.location.patientName}
+                nurseId={nurseId}
+                nurseName={nurseName}
+                onDialogSubmitChange={handleDialogChange}
               />
+              <div className="sbarHistoryDialog">
+                <DialogTest
+                  openDiag={showDialog}
+                  handleChange={handleDialogChange}
+                />
+              </div>
             </div>
           </MuiThemeProvider>
         </Route>
-
-        <Route exact path="/medmemo/nurse/contactPhysician">
-          {/* ------------------ Temporarily routed here -------------------------*/}
-          <ContactPhysicanCard
-            pname="Dr. Geneva"
-            specialty="Neurology"
-            availability="Away on vacation"
-          />
-        </Route>
-        {/* <Route exact path="/nurse/add-patient">
-          <CreatePatient />
-        </Route> */}
 
         <Route exact path="/medmemo/nurse/:patientName/:patientId/:roomId">
           <Sbar nurseId={nurseId} nurseName={nurseName} />

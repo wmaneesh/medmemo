@@ -113,9 +113,6 @@ function App() {
               authenticate={authenticate}
               setAuthenticate={setAuthenticate}
               accountType={accountType}
-              pname="Dr. Geneva"
-              specialty="Neurology"
-              availability="Away on vacation"
             />
             <ProtectedLogin
               path="/"
