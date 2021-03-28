@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { TextField, Button, Collapse } from "@material-ui/core";
 
 import firebase from "../firebase/firebase";
-import { formatRelative } from "../firebase/fireHooks";
 
 const ContactPhysicanCard = (props) => {
   const [physName, setPhysName] = useState("");
