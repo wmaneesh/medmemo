@@ -240,7 +240,7 @@ $base-color: rgb(51, 187, 179);
     height: 100%;
   }
 
-  li {
+  .navBar-li {
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -339,13 +339,13 @@ $base-color: rgb(51, 187, 179);
   }
 
   @media only screen and (max-width: 1800px) {
-    li {
+    .navBar-li {
       margin: 0 3rem;
     }
   }
 
   @media only screen and (max-width: 1400px) {
-    li {
+    .navBar-li {
       margin: 0 1rem;
     }
   }
@@ -382,7 +382,7 @@ $base-color: rgb(51, 187, 179);
       right: 0;
     }
 
-    li {
+    .navBar-li {
       text-align: center;
       padding: 2rem 0;
       width: 100%;
