@@ -40,7 +40,7 @@ const NavBar = (props) => {
       }
     });
     props.setAuthenticate(false);
-    Cookies.remove("token");
+    Cookies.remove("sid");
   };
 
   return (
