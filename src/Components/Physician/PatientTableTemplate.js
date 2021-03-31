@@ -272,7 +272,7 @@ export default function EnhancedTable(props) {
 
   useEffect(() => {
     if (props.search === "") {
-      fetch(`https://159.203.29.156/nurse/viewPatients/1`)
+      fetch(`https://server.wmaneesh.com/nurse/viewPatients/1`)
         .then((res) => {
           if (res.ok) {
             return res.json();
