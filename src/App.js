@@ -48,7 +48,7 @@ function App() {
           setUserToken("");
         }
       });
-  }, [accountType, authenticate]);
+  }, [accountType, authenticate, userToken]);
 
   const themes = createMuiTheme({
     palette: {
