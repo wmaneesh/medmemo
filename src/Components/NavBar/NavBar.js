@@ -98,7 +98,9 @@ const NavBar = (props) => {
         <nav className="navbar">
           <ul className={open ? "navbar-menu active" : "navbar-menu"}>
             <li className="navBar-li">
-              <NurseMsgList inbox={nurseInbox} />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <NurseMsgList inbox={nurseInbox} />
+              </div>
             </li>
 
             <li className="navBar-li">
