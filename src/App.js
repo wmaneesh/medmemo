@@ -1,16 +1,7 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useHistory,
-  useLocation,
-  Redirect,
-} from "react-router-dom";
-import Cookies from "js-cookie";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import {
-  Button,
   createMuiTheme,
   MuiThemeProvider,
   makeStyles,
