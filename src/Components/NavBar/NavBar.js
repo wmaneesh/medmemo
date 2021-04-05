@@ -51,7 +51,6 @@ const NavBar = (props) => {
   };
 
   const handleLogout = () => {
-    console.log("logout is being called");
     fetch("https://server.wmaneesh.com/login/logout", {
       credentials: "include",
     }).then((res) => {
@@ -63,7 +62,6 @@ const NavBar = (props) => {
       }
     });
     props.setAuthenticate(false);
-    Cookies.remove("sid");
   };
 
   return (

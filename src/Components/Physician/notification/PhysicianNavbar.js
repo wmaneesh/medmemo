@@ -64,7 +64,6 @@ const PhysicianNavBar = (props) => {
       }
     });
     props.setAuthenticate(false);
-    Cookies.remove("sid");
   };
 
   console.log("heres the inbox:", inbox);
