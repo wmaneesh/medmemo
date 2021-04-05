@@ -64,6 +64,7 @@ const PhysicianNavBar = (props) => {
         }
       })
       .then((result) => {
+        console.log(result);
         props.setAuthenticate(false);
         history.push("/medmemo/");
       });
