@@ -44,7 +44,7 @@ function App() {
           setUserToken(result.user);
         } else {
           setAuthenticate(false);
-          setAccountType("/medmemo/");
+          setAccountType("/medmemo");
           setUserToken("");
         }
       });
@@ -106,7 +106,7 @@ function App() {
               accountType={accountType}
             />
             <ProtectedLogin
-              path="/"
+              path="/medmemo"
               component={Login}
               authenticate={authenticate}
               setAuthenticate={setAuthenticate}
