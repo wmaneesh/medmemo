@@ -65,7 +65,7 @@ const headCells = [
     disablePadding: false,
     label: "Room Number",
   },
-  { id: "s_problem", numeric: false, disablePadding: false, label: "Urgency" },
+  { id: "r_priority", numeric: false, disablePadding: false, label: "Urgency" },
   {
     id: "view_sbar",
     numeric: false,
@@ -222,8 +222,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function EnhancedTable(props) {
   const classes = useStyles();
-  const [order, setOrder] = React.useState("asc");
-  const [orderBy, setOrderBy] = React.useState("patient_name");
+  const [order, setOrder] = React.useState("desc");
+  const [orderBy, setOrderBy] = React.useState("r_priority");
   const [selected, setSelected] = React.useState([]);
   const [patientName, setPatientName] = React.useState("");
   const [page, setPage] = React.useState(0);
@@ -235,7 +235,7 @@ export default function EnhancedTable(props) {
       nurse_name: "-",
       sbar_note_archive_date_created: "-",
       sbar_note_archive_room_id: "-",
-      s_problem: "-",
+      r_priority: "-",
     },
   ]);
   ///
@@ -246,7 +246,7 @@ export default function EnhancedTable(props) {
       nurse_name: "-",
       sbar_note_archive_date_created: "-",
       sbar_note_archive_room_id: "-",
-      s_problem: "-",
+      r_priority: "-",
     },
   ]);
 
@@ -360,7 +360,7 @@ export default function EnhancedTable(props) {
                           {patients.sbar_note_archive_room_id}
                         </TableCell>
                         <TableCell align="center">
-                          {patients.s_problem}
+                          {patients.r_priority}
                         </TableCell>
                         <TableCell align="center">
                           <Link
