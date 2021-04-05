@@ -44,7 +44,7 @@ function App() {
           setUserToken(result.user);
         } else {
           setAuthenticate(false);
-          setAccountType("/medmemo");
+          setAccountType("/medmemo/");
           setUserToken("");
         }
       });
