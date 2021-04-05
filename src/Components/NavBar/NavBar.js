@@ -53,15 +53,18 @@ const NavBar = (props) => {
   const handleLogout = () => {
     fetch("https://server.wmaneesh.com/login/logout", {
       credentials: "include",
-    }).then((res) => {
-      if (res.ok) {
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          console.log("logout was unsuccessfull");
+        }
+      })
+      .then((result) => {
+        props.setAuthenticate(false);
         history.push("/medmemo/");
-        return res.json();
-      } else {
-        console.log("logout was unsuccessfull");
-      }
-    });
-    props.setAuthenticate(false);
+      });
   };
 
   return (

@@ -55,15 +55,18 @@ const PhysicianNavBar = (props) => {
   };
 
   const handleLogout = () => {
-    fetch("https://server.wmaneesh.com/login/logout").then((res) => {
-      if (res.ok) {
+    fetch("https://server.wmaneesh.com/login/logout")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          console.log("logout was unsuccessfull");
+        }
+      })
+      .then((result) => {
+        props.setAuthenticate(false);
         history.push("/medmemo/");
-        return res.json();
-      } else {
-        // console.log("logout was unsuccessfull");
-      }
-    });
-    props.setAuthenticate(false);
+      });
   };
 
   console.log("heres the inbox:", inbox);
