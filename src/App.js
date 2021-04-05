@@ -106,7 +106,7 @@ function App() {
               accountType={accountType}
             />
             <ProtectedLogin
-              path="/medmemo"
+              path="/"
               component={Login}
               authenticate={authenticate}
               setAuthenticate={setAuthenticate}
