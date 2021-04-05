@@ -78,7 +78,7 @@ const PhysicianDashBoard = (props) => {
           </MuiThemeProvider>
         </Route>
 
-        <Route path="medmemo/physician/viewSBAR">
+        <Route path="/medmemo/physician/viewSBAR">
           <ViewSbar
             nurseName={props.location.nurseName}
             patientId={props.location.patientId}

@@ -57,14 +57,14 @@ const PhysicianNavBar = (props) => {
   const handleLogout = () => {
     fetch("https://server.wmaneesh.com/login/logout").then((res) => {
       if (res.ok) {
-        history.push("/");
+        history.push("/medmemo/");
         return res.json();
       } else {
         // console.log("logout was unsuccessfull");
       }
     });
     props.setAuthenticate(false);
-    Cookies.remove("token");
+    Cookies.remove("sid");
   };
 
   console.log("heres the inbox:", inbox);
