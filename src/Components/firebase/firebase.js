@@ -14,12 +14,5 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig); // firebase.initializeApp gives us access to our database by passing in firebaseConfig as the argument
 
-//const database = firebase.database();
-
 export default firebase;
 
-// database.ref().set({
-//     name: "Mark"
-// }).then(() => {
-//     console.log('Resolved!');
-// });

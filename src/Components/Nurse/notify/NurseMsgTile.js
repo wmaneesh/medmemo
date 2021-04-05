@@ -30,10 +30,6 @@ const MessageFile = (props) => {
   const handleClick = () => {
     setOpen(!open);
   };
-  const markread = () => {
-    const ref = db.collection(`msg`).doc(props.keyval);
-    ref.update({ read: true });
-  };
 
   const deleteMsg = () => {
     setOpen(false);

@@ -57,6 +57,7 @@ const NursePage = (props) => {
         search={props.search}
         setSearch={props.setSearch}
         setAuthenticate={props.setAuthenticate}
+        nurseId={nurseId}
       />
       <Switch>
         <Route exact path="/medmemo/nurse">
