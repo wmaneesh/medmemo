@@ -107,6 +107,7 @@ class CreatePatient extends React.Component {
                   name={"password"}
                   placeholder={"Password"}
                   className="password cpInput"
+                  type="password"
                 />
 
                 <GeneralCreatePage
