@@ -55,7 +55,9 @@ const PhysicianNavBar = (props) => {
   };
 
   const handleLogout = () => {
-    fetch("https://server.wmaneesh.com/login/logout")
+    fetch("https://server.wmaneesh.com/login/logout", {
+      credentials: "include",
+    })
       .then((res) => {
         if (res.ok) {
           return res.json();
