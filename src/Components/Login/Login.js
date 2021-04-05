@@ -42,7 +42,6 @@ const Login = (props) => {
         }
       })
       .then((result) => {
-        console.log(result);
         if (result.user_type === undefined) {
           setStatusMessage(result);
         } else {
