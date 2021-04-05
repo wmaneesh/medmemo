@@ -11,6 +11,7 @@ const ContactPhysicanCard = (props) => {
 
   const [expanded, setExpanded] = useState(false);
   const [remarks, setRemarks] = useState("");
+  const dbf = firebase.firestore();
 
   useEffect(() => {
     fetch(`https://server.wmaneesh.com/nurse/getPhysInfo/${props.patientId}`)
@@ -36,14 +37,15 @@ const ContactPhysicanCard = (props) => {
 
   const handleChange = (e) => {
     setRemarks(e.target.value);
+    console.log(remarks);
   };
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
     var d = new Date();
 
-    console.log(d.toLocaleString()); // might have to change this
     const item = {
+      physician_id: physician_id,
       physician_name: physName,
       nurse_id: props.nurseId,
       nurse_name: props.nurseName,
@@ -52,10 +54,11 @@ const ContactPhysicanCard = (props) => {
       date_submitted: d.toLocaleString(),
       text: remarks,
       read: false,
+      ack: false,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     };
 
-    const fitem = firebase.database().ref(`Nurse Remarks/${physician_id}`);
-    fitem.push(item);
+    const res = dbf.collection(`msg`).add(item);
     handleExpandClick();
     props.onDialogSubmitChange(true);
     setRemarks("");
@@ -76,7 +79,6 @@ const ContactPhysicanCard = (props) => {
             <img
               className="AvImage"
               src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-              alt="physician image"
             />
           </div>
         </div>

@@ -1,0 +1,118 @@
+*:focus {
+  outline: 0;
+}
+
+.PhysMsgTileMenuItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.msgDate {
+  font-size: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.msgTextHeader {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: white;
+  background-color: #95b3d8;
+}
+
+.msgText {
+  text-align: center;
+  word-wrap: break-word;
+  width: 190px;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  padding: 10px;
+}
+
+.physicianMsgSection {
+  display: flex;
+  flex-direction: row;
+  transition-duration: 150ms;
+  margin-top: 3px;
+  transition-property: all;
+  z-index: -1;
+}
+
+.PhysicianMsgContents {
+  width: 100%;
+  z-index: 1;
+  background-color: #c1d4ec;
+  border-radius: 0px 0px 20px 20px;
+}
+.PhysicianMsgUnreadContainer,
+.PhysicianMsgDeleteContainer,
+.PhysicianAcknowledgeContainer {
+  padding-top: 2px;
+  width: 100%;
+}
+
+.PhysicianMsgUnreadContainer,
+.PhysicianMsgDeleteContainer,
+.PhysicianAcknowledgeContainer,
+.acknowledgeButton,
+.MarkAsUnreadButton,
+.MsgDeleteButton {
+  z-index: -2;
+
+  transform: translate(-93px, 0px);
+}
+.MarkAsUnreadButton,
+.MsgDeleteButton,
+.acknowledgeButton {
+  border: none;
+  font-size: 14px;
+  font-weight: 450;
+  height: 100%;
+  word-wrap: break-word;
+  transition-duration: 110ms;
+  transition-property: background-color, transform, margin-left;
+}
+
+.MarkAsUnreadButton {
+  background-color: #005fa8;
+  color: #ffffff;
+  width: 70px;
+}
+
+.MsgDeleteButton {
+  width: 55px;
+  border-radius: 0px 10px 10px 0px;
+  color: white;
+  background-color: rgb(179, 0, 0);
+}
+
+.acknowledgeButton {
+  width: 55px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #77b471;
+  border: none;
+  margin-left:5px;
+}
+
+.physicianMsgSection:hover {
+  .PhysicianAcknowledgeContainer,
+  .acknowledgeButton,
+  .PhysicianMsgUnreadContainer,
+  .PhysicianMsgDeleteContainer,
+  .MarkAsUnreadButton,
+  .MsgDeleteButton {
+    transform: translate(0px, 0px);
+  }
+}
+.MsgDeleteButton:hover {
+  background-color: rgb(128, 0, 0);
+}
+
+.MarkAsUnreadButton:hover {
+  background-color: #004d88;
+}
+
+.acknowledgeButton:hover {
+  background-color: #0c6d01;
+}

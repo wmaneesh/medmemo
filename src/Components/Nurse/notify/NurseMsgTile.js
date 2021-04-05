@@ -1,10 +1,12 @@
 import react, { useState, useEffect } from "react";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Collapse } from "@material-ui/core";
-import {  Fade } from "@material-ui/core";
+import { Fade } from "@material-ui/core";
 import firebase from "../../firebase/firebase";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import CheckIcon from "@material-ui/icons/Check";
+import ErrorIcon from "@material-ui/icons/Error";
+import SendRoundedIcon from "@material-ui/icons/Send";
 
 const MessageFile = (props) => {
   const [open, setOpen] = useState(false);
@@ -32,20 +34,6 @@ const MessageFile = (props) => {
     const ref = db.collection(`msg`).doc(props.keyval);
     ref.update({ read: true });
   };
-  const markUnread = () => {
-    const ch = db.collection(`msg`).doc(props.keyval).update({ ack: false });
-    setOpen(false);
-    const ref = db.collection(`msg`).doc(props.keyval);
-    ref.update({ read: false });
-  };
-
-  const markAcknowledge = async () => {
-    setOpen(false);
-    const ref = db.collection(`msg`).doc(props.keyval);
-    const doc = await ref.get();
-    const set = !doc.data().ack;
-    ref.update({ ack: set });
-  };
 
   const deleteMsg = () => {
     setOpen(false);
@@ -55,9 +43,8 @@ const MessageFile = (props) => {
 
     setTimeout(() => {
       const ref = db.collection(`msg`).doc(props.keyval).delete();
-    }, 350);
+    }, 400);
   };
-
 
   return (
     <Fade in={fadeIn}>
@@ -66,21 +53,13 @@ const MessageFile = (props) => {
           <MenuItem
             className="PhysMsgTileMenuItem"
             style={{
-              fontWeight: `${props.readFlag === false ? "650" : "450"}`,
-              backgroundColor: `${
-                isAck === true
-                  ? "#dcf2e2"
-                  : props.readFlag === false
-                  ? "#fff0fd"
-                  : "#ffffff"
-              }`,
+              fontWeight: `${isAck === true ? "650" : "450"}`,
+              backgroundColor: `${isAck === true ? "#dcf2e2" : "#ffffff"}`,
             }}
-            onClick={markread}
           >
             <div style={{ textAlign: "center" }}>
               <div className="msgDate">{props.date}</div>
               <div className="msgPatName">Patient: {props.patient_name}</div>
-              <div className="msgNurseName">Nurse: {props.nurse_name}</div>
             </div>
           </MenuItem>
         </div>
@@ -92,23 +71,35 @@ const MessageFile = (props) => {
         >
           <div className="physicianMsgSection">
             <div className="PhysicianMsgContents">
-              <div className="msgTextHeader">Message:</div>
-              <div className="msgText">
+              <div className="msgTextHeader">To: Dr {props.physician_name}</div>
+              <div className="NurseMsgText">
                 <p>{props.text}</p>
               </div>
+              <div className="NurseMsgIconSection">
+                <div className="NurseMsgIconContainer">
+                  <div className="NurseMsgIconText">
+                    {isAck ? "seen" : "delivered"}
+                  </div>
+                  <div className="NurseMsgIcon">
+                    {isAck ? (
+                      <CheckIcon
+                        style={{
+                          color: "white",
+                          fontSize: "15",
+                          Transform: "translate(100px 0px)",
+                        }}
+                      />
+                    ) : (
+                      <SendRoundedIcon
+                        style={{ color: "white", fontSize: "12" }}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="PhysicianAcknowledgeContainer">
-              <button className="acknowledgeButton" onClick={markAcknowledge}>
-                <CheckIcon style={{ Color: "#007a23" }} />
-              </button>
-            </div>
-            <div className="PhysicianMsgUnreadContainer">
-              <button className="MarkAsUnreadButton" onClick={markUnread}>
-                Mark Unread
-              </button>
-            </div>
-            <div className="PhysicianMsgDeleteContainer">
-              <button className="MsgDeleteButton" onClick={deleteMsg}>
+            <div className="NurseMsgDeleteContainer">
+              <button className="NurseMsgDeleteButton" onClick={deleteMsg}>
                 <HighlightOffIcon style={{ color: "#6e0000" }} />
               </button>
             </div>

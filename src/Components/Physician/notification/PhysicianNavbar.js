@@ -15,7 +15,8 @@ import InboxList from "./InboxList";
 const PhysicianNavBar = (props) => {
   const [open, setOpen] = useState(false);
   const [inbox, setInbox] = useState([]);
-  const db = firebase.database();
+  const [physID, setPhysID] = useState(props.physicianID);
+  const db = firebase.firestore();
   let temp = [];
   let item = [];
 
@@ -23,18 +24,21 @@ const PhysicianNavBar = (props) => {
 
   useEffect(() => {
     if (props.physicianID !== undefined && props.physicianID !== "") {
-      const ref = db.ref(`Nurse Remarks/${props.physicianID}`);
-      ref.on("value", (snapshot) => {
-        temp = [];
-        snapshot.forEach((childSnapshot) => {
-          item = childSnapshot.val();
-          item.key = childSnapshot.key;
-          console.log("key", item.key);
-          temp.push(item);
-          console.log("temp:", temp);
+      const ref = db.collection("msg");
+      const q = ref
+        .orderBy("timestamp", "desc")
+        .where("physician_id", "==", props.physicianID)
+
+        .onSnapshot((snapshot) => {
+          temp = [];
+          snapshot.forEach((childSnapshot) => {
+            item = childSnapshot.data();
+            item.key = childSnapshot.id;
+            temp.push(item);
+          });
+
+          setInbox(temp);
         });
-        setInbox(temp);
-      });
     }
   }, [props.physicianID]);
 
@@ -53,20 +57,21 @@ const PhysicianNavBar = (props) => {
   const handleLogout = () => {
     fetch("https://server.wmaneesh.com/login/logout").then((res) => {
       if (res.ok) {
-        history.push("/medmemo");
+        history.push("/");
         return res.json();
       } else {
-        console.log("logout was unsuccessfull");
+        // console.log("logout was unsuccessfull");
       }
     });
     props.setAuthenticate(false);
     Cookies.remove("token");
   };
 
+  console.log("heres the inbox:", inbox);
   return (
     <header className="main-navbar">
       <div className="navbar-contents">
-        <a href="/medemo/">
+        <a href="/">
           <FontAwesomeIcon className="logo fa-2x" icon={faClinicMedical} />
         </a>
         <a className="search-icon">
@@ -98,11 +103,6 @@ const PhysicianNavBar = (props) => {
               <div className="msgListContainer">
                 <InboxList physicianID={props.physicianID} inbox={inbox} />
               </div>
-            </li>
-            <li className="navBar-li">
-              <a href="#" className="navbar-links">
-                Help
-              </a>
             </li>
             <li className="navBar-li">
               <button className="logout" onClick={handleLogout}>

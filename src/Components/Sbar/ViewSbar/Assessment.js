@@ -54,7 +54,7 @@ function Assessment(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <Checkbox
-              label="Respitory"
+              label="Respiratory"
               name="a_problem_respitory"
               defaultValue={props.assessment.a_problem_respitory}
             ></Checkbox>

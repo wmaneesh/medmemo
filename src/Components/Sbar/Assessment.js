@@ -58,7 +58,7 @@ function Assessment(props) {
           </Grid>
           <Grid item lg={4} xl={2}>
             <Checkbox
-              label="Respitory"
+              label="Respiratory"
               name="a_problem_respitory"
               value={props.assessment.a_problem_respitory}
               onBlur={props.handleInput}
