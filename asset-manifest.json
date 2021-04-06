@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/medmemo/static/css/main.c07c3025.chunk.css",
-    "main.js": "/medmemo/static/js/main.239e87aa.chunk.js",
-    "main.js.map": "/medmemo/static/js/main.239e87aa.chunk.js.map",
+    "main.js": "/medmemo/static/js/main.44839d84.chunk.js",
+    "main.js.map": "/medmemo/static/js/main.44839d84.chunk.js.map",
     "runtime-main.js": "/medmemo/static/js/runtime-main.5c12cad3.js",
     "runtime-main.js.map": "/medmemo/static/js/runtime-main.5c12cad3.js.map",
-    "static/js/2.e601f05f.chunk.js": "/medmemo/static/js/2.e601f05f.chunk.js",
-    "static/js/2.e601f05f.chunk.js.map": "/medmemo/static/js/2.e601f05f.chunk.js.map",
+    "static/js/2.2118a200.chunk.js": "/medmemo/static/js/2.2118a200.chunk.js",
+    "static/js/2.2118a200.chunk.js.map": "/medmemo/static/js/2.2118a200.chunk.js.map",
     "index.html": "/medmemo/index.html",
     "static/css/main.c07c3025.chunk.css.map": "/medmemo/static/css/main.c07c3025.chunk.css.map",
-    "static/js/2.e601f05f.chunk.js.LICENSE.txt": "/medmemo/static/js/2.e601f05f.chunk.js.LICENSE.txt"
+    "static/js/2.2118a200.chunk.js.LICENSE.txt": "/medmemo/static/js/2.2118a200.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5c12cad3.js",
-    "static/js/2.e601f05f.chunk.js",
+    "static/js/2.2118a200.chunk.js",
     "static/css/main.c07c3025.chunk.css",
-    "static/js/main.239e87aa.chunk.js"
+    "static/js/main.44839d84.chunk.js"
   ]
 }
