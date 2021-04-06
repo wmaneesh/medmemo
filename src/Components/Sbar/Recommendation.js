@@ -33,7 +33,7 @@ function Recommendation(props) {
               name="r_priority"
               value={props.recommendation.r_priority}
               onBlur={props.handleInput}
-              text="Priority of the condition from a scale of 1-3, 1 being the least and 3 being the most "
+              text="Priority of the condition from a scale of 1 (lowest) to 3 (highest)"
             ></Inputgroup>
           </Grid12>
           <Grid12>
