@@ -62,7 +62,7 @@ function Recommendation(props) {
           </Grid12>
           <Grid12>
             <Inputgroup
-              label="frequency"
+              label="Frequency"
               name="r_freq_vital_signs"
               value={props.recommendation.r_freq_vital_signs}
               onBlur={props.handleInput}
