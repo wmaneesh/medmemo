@@ -69,7 +69,7 @@ export default function InboxList(props) {
               style={{
                 //margin: "4px",
                 fontSize: "1.5rem",
-                textTransform: "lowercase",
+                textTransform: "none",
               }}
             >
               Inbox
