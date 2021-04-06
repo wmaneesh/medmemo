@@ -82,7 +82,7 @@ const PhysicianNavBar = (props) => {
         <a className="search-icon">
           <input
             type="search"
-            placeholder="search patient"
+            placeholder="Search patient"
             value={props.search}
             onChange={handleSearchInput}
           />

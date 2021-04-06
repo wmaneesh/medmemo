@@ -17,17 +17,17 @@ function Background(props) {
     <div className="paper-situation">
       <div className="background">B</div>
       <Paper className={paperstyle.pageContent} elevation={5}>
-        <Grid container>
+        <Grid container align="left">
           <Grid12>
             <InputLabel
               style={{ fontSize: "1.2rem", fontWeight: "700", margin: "20px" }}
             >
-              The patient's mental status is:
+              The Patient's mental status is:
             </InputLabel>
           </Grid12>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Alert and oriented to person place and time."
+              label="Alert and oriented to person place and time"
               name="b_awareness_alert_oriented"
               value={props.background.b_awareness_alert_oriented}
               onBlur={props.handleInput}
@@ -35,7 +35,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Confused and cooperative."
+              label="Confused and cooperative"
               name="b_awareness_confused_cooperative"
               value={props.background.b_awareness_confused_cooperative}
               onBlur={props.handleInput}
@@ -43,7 +43,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="non-cooperative, agitated or combative."
+              label="non-cooperative, agitated or combative"
               name="b_awareness_non_coop_agit_combative"
               value={props.background.b_awareness_non_coop_agit_combative}
               onBlur={props.handleInput}
@@ -51,7 +51,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Stuporous and not talking clearly and possibly not able to swallow."
+              label="Stuporous and not talking clearly and possibly not able to swallow"
               name="b_awareness_stuporous"
               value={props.background.b_awareness_stuporous}
               onBlur={props.handleInput}
@@ -59,7 +59,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Comatose. Eyes closed. Not responding to stimulation."
+              label="Comatose. Eyes closed. Not responding to stimulation"
               name="b_awareness_comatose"
               value={props.background.b_awareness_comatose}
               onBlur={props.handleInput}
@@ -133,7 +133,7 @@ function Background(props) {
               name="s_o2"
               value={props.background.s_o2}
               onBlur={props.handleInput}
-              text="The patient has been on "
+              text="The Patient has been on "
             ></Inputgroup>
             <Inputgroup
               label="(hours)"
@@ -145,7 +145,7 @@ function Background(props) {
           </Grid12>
           <Grid12>
             <Checkbox
-              label="The oximeter does not detect a good puslse and is giving erratic readings."
+              label="The oximeter does not detect a good puslse and is giving erratic readings"
               name="b_oximeter_detection"
               value={props.background.b_oximeter_detection}
               onBlur={props.handleInput}

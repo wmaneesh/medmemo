@@ -17,7 +17,7 @@ function Recommendation(props) {
     <div className="paper-situation">
       <div className="recommendation">R</div>
       <Paper className={paperstyle.pageContent} elevation={6}>
-        <Grid container>
+        <Grid container align="left">
           <Grid12>
             <Inputgroup
               label="What needs to be done"
@@ -38,7 +38,7 @@ function Recommendation(props) {
           </Grid12>
           <Grid12>
             <Checkbox
-              label="Talk to the patient or family about code status."
+              label="Talk to the Patient or family about code status"
               name="r_patient_family_code_status"
               value={props.recommendation.r_patient_family_code_status}
               onBlur={props.handleInput}
@@ -79,7 +79,7 @@ function Recommendation(props) {
           </Grid12>
           <Grid12>
             <Checkbox
-              label="If the patient does not get better when would you want us to call again?"
+              label="If the Patient does not get better when would you want us to call again?"
               name="r_problem_persist_contact"
               value={props.recommendation.r_problem_persist_contact}
               onBlur={props.handleInput}

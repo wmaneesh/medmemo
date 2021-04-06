@@ -17,7 +17,7 @@ function Assessment(props) {
     <div className="paper-situation">
     <div className="assessment">A</div>
       <Paper className={paperstyle.pageContent} elevation={5}>
-        <Grid container>
+        <Grid containe justify="flex-start" align="left">
           <Grid item xs={12}>
             <Inputgroup
               label="Problem"
@@ -27,12 +27,12 @@ function Assessment(props) {
               text="This is what I think the problem is:"
             ></Inputgroup>
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={12} lg={4} xl={2}>
             <InputLabel style={{ width: "100%" }}>
               The problem seems to be:
             </InputLabel>
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={6} lg={4} xl={2}>
             <Checkbox
               label="Cardiac"
               name="a_problem_cardiac"
@@ -40,7 +40,7 @@ function Assessment(props) {
               onBlur={props.handleInput}
             ></Checkbox>
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={6} lg={4} xl={2}>
             <Checkbox
               label="Infection"
               name="a_problem_infection"
@@ -48,7 +48,7 @@ function Assessment(props) {
               onBlur={props.handleInput}
             ></Checkbox>
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={6} lg={4} xl={2}>
             <Checkbox
               label="Neurologic"
               name="a_problem_neurologic"
@@ -56,7 +56,7 @@ function Assessment(props) {
               onBlur={props.handleInput}
             ></Checkbox>
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={6} lg={4} xl={2}>
             <Checkbox
               label="Respiratory"
               name="a_problem_respitory"
@@ -66,7 +66,7 @@ function Assessment(props) {
           </Grid>
           <Grid12>
             <Checkbox
-              label="I am not sure what the problem is but the patient is deteriorating."
+              label="I am not sure what the problem is but the Patient is deteriorating"
               name="a_problem_unsure_deterioriating"
               value={props.assessment.a_problem_unsure_deterioriating}
               onBlur={props.handleInput}
@@ -74,7 +74,7 @@ function Assessment(props) {
           </Grid12>
           <Grid12>
             <Checkbox
-              label="The patient seems to be unstable, we need to do something."
+              label="The Patient seems to be unstable, we need to do something"
               name="a_unstable"
               value={props.assessment.a_unstable}
               onBlur={props.handleInput}
@@ -82,7 +82,7 @@ function Assessment(props) {
           </Grid12>
           <Grid12>
             <Checkbox
-              label="I am afraid the patient may arrest."
+              label="I am afraid the Patient may arrest"
               name="a_arrest"
               value={props.assessment.a_arrest}
               onBlur={props.handleInput}

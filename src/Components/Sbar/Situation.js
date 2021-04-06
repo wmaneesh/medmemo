@@ -24,10 +24,10 @@ function Situation(props) {
     <div className="paper-situation">
       <div className="situation">S</div>
       <Paper className={paperstyle.pageContent} elevation={5}>
-        <Grid container>
+        <Grid container align="left">
           <Grid item xs={12} md={6}>
             <Inputgroup
-              label="Nurse Name"
+              label="Nurse name"
               name="nurseId"
               defaultValue={nurseName}
               text="This is"
@@ -70,12 +70,12 @@ function Situation(props) {
               text="The problem I am calling about is: "
             ></Inputgroup>
           </Grid12>
-          <Grid item lg={4} xl={4}>
+          <Grid item xs={12} lg={4} xl={4}>
             <InputLabel style={{ width: "100%" }}>
               I have assessed the patient personally. Vital signs are:
             </InputLabel>
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={12} lg={4} xl={2}>
             <TextFieldSingle
               label="Blood Pressure (mmHg)"
               name="s_BP"
@@ -83,7 +83,7 @@ function Situation(props) {
               onBlur={props.handleInput}
             />
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={12} lg={4} xl={2}>
             <TextFieldSingle
               label="Pulse (bpm)"
               name="s_pulse"
@@ -91,7 +91,7 @@ function Situation(props) {
               onBlur={props.handleInput}
             />
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={12} lg={4} xl={2}>
             <TextFieldSingle
               label="Respiration (breaths/min)"
               name="s_respiration"
@@ -99,7 +99,7 @@ function Situation(props) {
               onBlur={props.handleInput}
             />
           </Grid>
-          <Grid item lg={4} xl={2}>
+          <Grid item xs={12} lg={4} xl={2}>
             <TextFieldSingle
               label="Temperature (celcius)"
               name="s_temperature"
@@ -107,7 +107,7 @@ function Situation(props) {
               onBlur={props.handleInput}
             />
           </Grid>
-          <Grid item lg={4} xl={3}>
+          <Grid item xs={12} lg={4} xl={3}>
             <TextFieldSingle
               label="O2 sat (%)"
               name="s_o2"
@@ -124,7 +124,7 @@ function Situation(props) {
           </Grid12>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Blood pressure because it is less than 90 or 30 mmHg below usual."
+              label="Blood pressure because it is less than 90 or 30 mmHg below usual"
               name="s_concern_bp"
               value={props.situation.s_concern_bp}
               onBlur={props.handleInput}
@@ -132,7 +132,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Pulse because it is over 125 or less than 45 per minute."
+              label="Pulse because it is over 125 or less than 45 per minute"
               name="s_concern_pulse"
               value={props.situation.s_concern_pulse}
               onBlur={props.handleInput}
@@ -140,7 +140,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Respiration because it is less than 10 or over 30 breaths per minute."
+              label="Respiration because it is less than 10 or over 30 breaths per minute"
               name="s_concern_respiration"
               value={props.situation.s_concern_respiration}
               onBlur={props.handleInput}
@@ -148,7 +148,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="Temperature because it is less than 34 or over 40 celsius degrees."
+              label="Temperature because it is less than 34 or over 40 celsius degrees"
               name="s_concern_temperature"
               value={props.situation.s_concern_temperature}
               onBlur={props.handleInput}
@@ -156,7 +156,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="O2 Sat because it is <90% despite oxygen given."
+              label="O2 Sat because it is <90% despite oxygen given"
               name="s_concern_o2"
               value={props.situation.s_concern_o2}
               onBlur={props.handleInput}
