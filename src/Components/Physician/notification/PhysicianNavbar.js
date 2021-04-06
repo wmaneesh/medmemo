@@ -76,7 +76,7 @@ const PhysicianNavBar = (props) => {
   return (
     <header className="main-navbar">
       <div className="navbar-contents">
-        <a href="/">
+        <a href="/medmemo">
           <FontAwesomeIcon className="logo fa-2x" icon={faClinicMedical} />
         </a>
         <a className="search-icon">
