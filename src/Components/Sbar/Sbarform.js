@@ -164,6 +164,8 @@ export default function Sbarform(props) {
     situationValue.note_room_id = parseInt(props.roomId);
   }, []);
 
+  console.log(props.patientId);
+
   return (
     <Form onSubmit={handleSubmit}>
       <Situation
