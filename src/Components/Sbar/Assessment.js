@@ -16,7 +16,7 @@ function Assessment(props) {
   return (
     <div className="paper-situation">
     <div className="assessment">A</div>
-      <Paper className={paperstyle.pageContent} elevation={5}>
+      <Paper className={paperstyle.pageContent} elevation={1}>
         <Grid containe justify="flex-start" align="left">
           <Grid item xs={12}>
             <Inputgroup

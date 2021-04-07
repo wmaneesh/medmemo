@@ -360,7 +360,7 @@ export default function EnhancedTable(props) {
           width: "80%",
         }}
       >
-        <Paper className={classes.paper} elevation={4}>
+        <Paper className={classes.paper} elevation={1}>
           <EnhancedTableToolbar
             numSelected={selected.length}
             name={patientName}
