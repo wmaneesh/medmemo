@@ -17,7 +17,7 @@ function Background(props) {
     <div className="paper-situation">
       <div className="background">B</div>
       <Paper className={paperstyle.pageContent} elevation={0}>
-        <Grid container>
+        <Grid container justify="flex-start" align="left">
           <Grid12>
             <InputLabel
               style={{ fontSize: "1.2rem", fontWeight: "700", margin: "20px" }}

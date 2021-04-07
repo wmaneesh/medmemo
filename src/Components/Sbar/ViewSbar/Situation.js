@@ -24,7 +24,7 @@ function Situation(props) {
     <div className="paper-situation">
       <div className="situation">S</div>
       <Paper className={paperstyle.pageContent} elevation={0}>
-        <Grid container>
+        <Grid container justify="flex-start" align="left">
           <Grid item xs={12} md={6}>
             <Inputgroup
               label="Nurse Name"

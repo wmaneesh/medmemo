@@ -17,7 +17,7 @@ function Recommendation(props) {
     <div className="paper-situation">
       <div className="recommendation">R</div>
       <Paper className={paperstyle.pageContent} elevation={0}>
-        <Grid container>
+        <Grid container justify="flex-start" align="left">
           <Grid12>
             <Inputgroup
               label="What needs to be done"
