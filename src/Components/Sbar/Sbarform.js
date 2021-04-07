@@ -162,7 +162,7 @@ export default function Sbarform(props) {
     situationValue.note_patient_id = parseInt(props.patientId);
     situationValue.note_nurse_id = parseInt(props.nurseId);
     situationValue.note_room_id = parseInt(props.roomId);
-  }, []);
+  }, [props.patientId, props.nurseId, props.roomId]);
 
   return (
     <Form onSubmit={handleSubmit}>
