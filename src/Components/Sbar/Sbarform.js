@@ -165,6 +165,7 @@ export default function Sbarform(props) {
   }, []);
 
   console.log(props.patientId);
+  console.log(situationValue);
 
   return (
     <Form onSubmit={handleSubmit}>
