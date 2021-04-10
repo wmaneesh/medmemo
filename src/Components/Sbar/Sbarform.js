@@ -179,7 +179,11 @@ export default function Sbarform(props) {
       />
       <Background handleInput={handleInput} background={backgroundValue} />
       <Assessment handleInput={handleInput} assessment={assessmentValue} />
-      <Recommendation handleInput={handleInput} recommendation={recValue} />
+      <Recommendation
+        handleInput={handleInput}
+        recommendation={recValue}
+        errors={errors}
+      />
 
       <div
         className="button-styles"
