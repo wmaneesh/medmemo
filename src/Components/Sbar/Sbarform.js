@@ -80,7 +80,10 @@ export default function Sbarform(props) {
     setOpen(false);
   };
 
-  const validate = (fieldValues = situationValue) => {
+  const validate = (
+    fieldValues = situationValue,
+    filedrecValues = recValue
+  ) => {
     let temp = { ...errors };
     if ("s_problem" in fieldValues)
       temp.s_problem = fieldValues.s_problem ? "" : "This field is required";
@@ -88,11 +91,15 @@ export default function Sbarform(props) {
       temp.s_code_status = fieldValues.s_code_status
         ? ""
         : "This field is required";
+    if ("r_priority" in filedrecValues)
+      temp.r_priority = filedrecValues.r_priority
+        ? ""
+        : "This field is required";
     setErrors({
       ...temp,
     });
 
-    if (fieldValues === situationValue)
+    if (fieldValues === situationValue && filedrecValues === recValue)
       return Object.values(temp).every((x) => x === "");
   };
 
@@ -125,9 +132,6 @@ export default function Sbarform(props) {
         ...assessmentValue,
         ...recValue,
       };
-      console.log(combinedValues);
-
-      console.log("Submit button was pressed");
       creatNewSbarNote();
     } else {
       setStatus(0);
@@ -163,9 +167,6 @@ export default function Sbarform(props) {
     situationValue.note_nurse_id = parseInt(props.nurseId);
     situationValue.note_room_id = parseInt(props.roomId);
   }, []);
-
-  console.log(props.patientId);
-  console.log(situationValue);
 
   return (
     <Form onSubmit={handleSubmit}>
