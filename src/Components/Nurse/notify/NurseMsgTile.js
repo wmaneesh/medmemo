@@ -5,7 +5,6 @@ import { Fade } from "@material-ui/core";
 import firebase from "../../firebase/firebase";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import CheckIcon from "@material-ui/icons/Check";
-import ErrorIcon from "@material-ui/icons/Error";
 import SendRoundedIcon from "@material-ui/icons/Send";
 
 const MessageFile = (props) => {

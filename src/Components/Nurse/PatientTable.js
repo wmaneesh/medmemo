@@ -319,7 +319,6 @@ export default function EnhancedTable(props) {
       );
     }
 
-    console.log(name, id, room_id);
     setPatientName(name);
     setPatientId(id);
     setPatientRoom(room_id);

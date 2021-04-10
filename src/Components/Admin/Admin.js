@@ -3,13 +3,12 @@ import { Switch, Route } from "react-router-dom";
 
 import Navigation from "../NavBar/NavBar.js";
 import DashboardButton from "./DashboardButton";
-import PatientTable from "../Nurse/PatientTable.js";
 import CreateNurse from "../createNewUser/CreateNurse.js";
 import CreatePhysician from "../createNewUser/CreatePhysician.js";
 import CreatePatient from "../createNewUser/CreatePatient.js";
 import UnlockAccount from "../createNewUser/UnlockAccount.js";
 
-import { Button, createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
 
 const theme = createMuiTheme({
   palette: {
@@ -28,10 +27,8 @@ const Admin = (props) => {
 
   const handleChange = (e) => {
     setRemarks(e.target.value);
-    console.log(remarks);
   };
 
-  const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [remarks, setRemarks] = useState("");
 

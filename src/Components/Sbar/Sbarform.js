@@ -111,7 +111,6 @@ export default function Sbarform(props) {
     errors,
     setErrors,
     handleInput,
-    handleReset,
   } = useForm(
     true,
     validate,

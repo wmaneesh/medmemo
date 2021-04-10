@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
 import clsx from "clsx";
@@ -233,7 +233,6 @@ export default function EnhancedTable(props) {
   ]);
 
   useEffect(() => {
-    console.log(props.nurseId, props.patientId);
     fetch(`https://server.wmaneesh.com/nurse/SBARHistory/${props.patientId}`)
       .then((res) => {
         if (res.ok) {
@@ -244,7 +243,6 @@ export default function EnhancedTable(props) {
       })
       .then((result) => {
         if (result !== undefined && result.length !== 0) {
-          console.log(result);
           setPatients(result);
           setSearchState(result);
         }

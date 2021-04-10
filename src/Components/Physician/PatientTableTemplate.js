@@ -255,7 +255,6 @@ export default function EnhancedTable(props) {
   ]);
 
   useEffect(() => {
-    console.log("TABLE", props.physicianID);
     fetch(
       `https://server.wmaneesh.com/physician/getPatientList/${props.physicianID}`
     )
@@ -314,7 +313,6 @@ export default function EnhancedTable(props) {
       );
     }
 
-    console.log(name, id, room_id);
     setPatientName(name);
     setPatientId(id);
     setPatientRoom(room_id);

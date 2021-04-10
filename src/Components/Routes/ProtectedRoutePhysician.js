@@ -7,7 +7,6 @@ const ProtectedRoutePhysician = ({
   component: Component,
   ...rest
 }) => {
-  console.log(authenticate);
   return (
     <Route
       {...rest}

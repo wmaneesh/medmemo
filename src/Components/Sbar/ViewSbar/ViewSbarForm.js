@@ -1,15 +1,10 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Background from "./Background.js";
 import Situation from "./Situation.js";
 import Assessment from "./Assessment.js";
 import Recommendation from "./Recommendation.js";
-import { ButtonForm, useForm, Form } from "./UseFormView.js";
-import {
-  makeStyles,
-  createMuiTheme,
-  ThemeProvider,
-  CircularProgress,
-} from "@material-ui/core/";
+import { Form } from "./UseFormView.js";
+import { makeStyles, CircularProgress } from "@material-ui/core/";
 
 //CHECK NULL FIELDS TO SEE IF YOU CAN JUST MAKE THEM EMPTY STRINGS. MYSQL DOESNT LIKE NULL
 const situation = {
@@ -79,14 +74,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#33bbb3",
-    },
-  },
-});
-
 export default function ViewSbarForm(props) {
   const [situationValue, setSituationValue] = useState(situation);
   const [backgroundValue, setBackgroundValue] = useState(background);
@@ -98,7 +85,6 @@ export default function ViewSbarForm(props) {
   const classes = useStyles();
 
   useEffect(() => {
-    console.log(props.dateCreated, props.patientId);
     fetch(
       `https://server.wmaneesh.com/nurse/getSBARHistoryFields/${props.dateCreated}/${props.patientId}`
     )
@@ -110,15 +96,12 @@ export default function ViewSbarForm(props) {
         }
       })
       .then((result) => {
-        //console.log(result);
         if (result !== undefined && result[0] !== 0) {
           for (let [key, value] of Object.entries(result[0])) {
-            //console.log(`${key}: ${value}`);
             if (key.charAt(0) === "s") {
               setSituationValue((prevSituationValue) => {
                 return { ...prevSituationValue, [key]: value };
               });
-              // console.log(situationValue);
             } else if (key.charAt(0) === "b") {
               setBackgroundValue((prevBackgroundValue) => {
                 return { ...prevBackgroundValue, [key]: value };

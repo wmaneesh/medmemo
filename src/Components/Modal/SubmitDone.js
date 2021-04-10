@@ -1,10 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import {
-  InputLabel,
-  createMuiTheme,
-  MuiThemeProvider,
-} from "@material-ui/core";
+import { InputLabel } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -83,10 +79,4 @@ function SubmitDone(props) {
     </div>
   );
 }
-
-// Modal.propTypes = {
-//   onClose: PropTypes.func.isRequired,
-//   open: PropTypes.bool.isRequired,
-// };
-
 export default SubmitDone;

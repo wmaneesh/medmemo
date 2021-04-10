@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Cookies from "js-cookie";
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,7 +14,6 @@ import InboxList from "./InboxList";
 const PhysicianNavBar = (props) => {
   const [open, setOpen] = useState(false);
   const [inbox, setInbox] = useState([]);
-  const [physID, setPhysID] = useState(props.physicianID);
   const db = firebase.firestore();
   let temp = [];
   let item = [];
@@ -66,13 +64,11 @@ const PhysicianNavBar = (props) => {
         }
       })
       .then((result) => {
-        console.log(result);
         props.setAuthenticate(false);
         history.push("/medmemo/");
       });
   };
 
-  console.log("heres the inbox:", inbox);
   return (
     <header className="main-navbar">
       <div className="navbar-contents">

@@ -1,15 +1,12 @@
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import PhysicianPatientList from "./PhysicianPatientList";
 import PhysicianNavBar from "./notification/PhysicianNavbar";
 import Header from "../Nurse/Header";
 
-import Navigation from "../NavBar/NavBar.js";
-import Sbar from "../Sbar/Sbar.js";
 import HistoryTable from "./physicianHistoryTable.js";
-import DialogTest from "./../Nurse/notify/DialogBox";
 
-import { Button, createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
 
 import ViewSbar from "../Sbar/ViewSbar/ViewSbar.js";
 
@@ -39,12 +36,10 @@ const PhysicianDashBoard = (props) => {
         if (result !== undefined && result.length !== 0) {
           setPhysicianId(result[0].physician_id);
           setPhysicianName(`Dr. ${result[0].physician_name}`);
-          console.log("here", physicianId);
         }
       });
   }, [props.userToken]);
 
-  console.log("phys id:", physicianId);
   return (
     <div>
       <PhysicianNavBar

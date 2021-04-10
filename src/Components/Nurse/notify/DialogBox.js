@@ -7,12 +7,6 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
 export default function DialogTest({ openDiag, handleChange }) {
-  console.log("dialog component:", openDiag);
-
-  const handleClickOpen = () => {
-    // openDiag ? setOpen(true) : null;
-  };
-
   const handleClose = () => {
     handleChange(false);
     // setOpen(false);

@@ -5,7 +5,7 @@ import GeneralCreatePage from "./GeneralCreatePage.js";
 import { Link } from "react-router-dom";
 import SubmitDone from "../Modal/SubmitDone";
 
-import { Button, Grid, TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 const formSchema = yup.object().shape({
   fname: yup
@@ -53,7 +53,6 @@ export default function CreatePatient(props) {
         }
       })
       .then((result) => {
-        console.log(result);
         if (result !== undefined && result.affectedRows === 1) {
           handleClickOpen();
           setStatus(1);

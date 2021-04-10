@@ -37,7 +37,6 @@ const ContactPhysicanCard = (props) => {
 
   const handleChange = (e) => {
     setRemarks(e.target.value);
-    console.log(remarks);
   };
 
   const handleSubmitClick = (e) => {

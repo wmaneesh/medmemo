@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Redirect, Route } from "react-router-dom";
 
 const ProtectedRouteNurse = ({
@@ -8,33 +8,6 @@ const ProtectedRouteNurse = ({
   component: Component,
   ...rest
 }) => {
-  // console.log(authenticate);
-  // console.log(accountType);
-  // console.log(path);
-  let auth = false;
-
-  // useEffect(() => {
-  //   fetch("/isAuthenticated")
-  //     .then((res) => {
-  //       if (res.ok) {
-  //         return res.json();
-  //       } else {
-  //         console.log("network response was bad");
-  //       }
-  //     })
-  //     .then((result) => {
-  //       if (result) {
-  //         console.log("im in the protected route thing");
-  //         auth = true;
-  //         // setAuthenticate(true);
-  //       } else {
-  //         console.log("im in the protected route thing");
-  //         auth = false;
-  //         // setAuthenticate(false);
-  //       }
-  //     });
-  // }, []);
-
   return (
     <Route
       {...rest}

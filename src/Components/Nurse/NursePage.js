@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, Link, useHistory, useParams } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Navigation from "../NavBar/NavBar.js";
 import PatientTable from "./PatientTable.js";
@@ -10,7 +10,7 @@ import ContactPhysicanCard from "./ContactPhysicianCard.js";
 import HistoryTable from "./HistoryTable.js";
 import DialogTest from "./notify/DialogBox";
 
-import { Button, createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/";
 
 import ViewSbar from "../Sbar/ViewSbar/ViewSbar.js";
 

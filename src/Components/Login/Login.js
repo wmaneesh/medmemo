@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ResetPasswordModal from "../Modal/ResetPasswordModal";
-import SubmitDone from "../Modal/SubmitDone";
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserMd, faUnlockAlt } from "@fortawesome/free-solid-svg-icons";

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Cookies from "js-cookie";
 //import icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -62,7 +61,6 @@ const NavBar = (props) => {
         }
       })
       .then((result) => {
-        console.log(result);
         props.setAuthenticate(false);
         history.push("/medmemo/");
       });
