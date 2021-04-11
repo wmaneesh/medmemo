@@ -204,8 +204,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function EnhancedTable(props) {
   const classes = useStyles();
-  const [order, setOrder] = React.useState("asc");
-  const [orderBy, setOrderBy] = React.useState("patient_name");
+  const [order, setOrder] = React.useState("desc");
+  const [orderBy, setOrderBy] = React.useState(
+    "sbar_note_archive_date_created"
+  );
   const [selected, setSelected] = React.useState([]);
   const [patientName, setPatientName] = React.useState("");
   const [page, setPage] = React.useState(0);
