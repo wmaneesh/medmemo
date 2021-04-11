@@ -61,7 +61,7 @@ const headCells = [
     disablePadding: false,
     label: "Room Number",
   },
-  { id: "s_problem", numeric: false, disablePadding: false, label: "Urgency" },
+  { id: "r_priority", numeric: false, disablePadding: false, label: "Urgency" },
   {
     id: "view_sbar",
     numeric: false,
@@ -217,7 +217,7 @@ export default function EnhancedTable(props) {
       nurse_name: "-",
       sbar_note_archive_date_created: "-",
       sbar_note_archive_room_id: "-",
-      s_problem: "-",
+      r_priority: "-",
     },
   ]);
 
@@ -228,7 +228,7 @@ export default function EnhancedTable(props) {
       nurse_name: "-",
       sbar_note_archive_date_created: "-",
       sbar_note_archive_room_id: "-",
-      s_problem: "-",
+      r_priority: "-",
     },
   ]);
 
@@ -340,7 +340,7 @@ export default function EnhancedTable(props) {
                           {patients.sbar_note_archive_room_id}
                         </TableCell>
                         <TableCell align="center">
-                          {patients.s_problem}
+                          {patients.r_priority}
                         </TableCell>
                         <TableCell align="center">
                           <Link
