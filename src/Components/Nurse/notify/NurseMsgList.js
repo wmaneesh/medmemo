@@ -72,13 +72,11 @@ export default function NurseMsgList(props) {
             >
               Outbox
             </div>
-            <div className="physInboxNumIcon">
-              <div
-                className="PinboxNumText"
-                style={{ color: props.inbox.length === 0 ? "green" : "red" }}
-              >
-                {props.inbox.length}
-              </div>
+            <div
+              className="physInboxNumIcon"
+              style={{ color: props.inbox.length === 0 ? "green" : "red" }}
+            >
+              <div className="PinboxNumText">{props.inbox.length}</div>
             </div>
           </Button>
         </div>
