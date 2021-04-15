@@ -174,7 +174,7 @@ const EnhancedTableToolbar = (props) => {
           variant="subtitle1"
           component="div"
         >
-          Loading {name}'s' SBAR...
+          Loading {name}'s SBAR...
         </Typography>
       ) : (
         <Typography
