@@ -43,7 +43,7 @@ function Situation(props) {
           </Grid>
           <Grid12>
             <Inputgroup
-              label="Patient name and location"
+              label="Patient name"
               name="note_patient_id"
               defaultValue={props.patientName}
               onBlur={props.handleInput}
@@ -156,7 +156,7 @@ function Situation(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="O2 Sat because it is <90% despite oxygen given"
+              label="O2 Sat because it is <90% despite oxygen being given"
               name="s_concern_o2"
               value={props.situation.s_concern_o2}
               onBlur={props.handleInput}

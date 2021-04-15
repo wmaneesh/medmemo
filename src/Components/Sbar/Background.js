@@ -43,7 +43,7 @@ function Background(props) {
           </Grid>
           <Grid item xs={12} md={6}>
             <Checkbox
-              label="non-cooperative, agitated or combative"
+              label="Non-cooperative, agitated or combative"
               name="b_awareness_non_coop_agit_combative"
               value={props.background.b_awareness_non_coop_agit_combative}
               onBlur={props.handleInput}
@@ -145,7 +145,7 @@ function Background(props) {
           </Grid12>
           <Grid12>
             <Checkbox
-              label="The oximeter does not detect a good puslse and is giving erratic readings"
+              label="The oximeter does not detect a good pulse and is giving erratic readings"
               name="b_oximeter_detection"
               value={props.background.b_oximeter_detection}
               onBlur={props.handleInput}

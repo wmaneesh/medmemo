@@ -29,7 +29,7 @@ function Recommendation(props) {
           </Grid12>
           <Grid12>
             <Inputgroup
-              label="Priority scale"
+              label="(Priority scale)"
               name="r_priority"
               value={props.recommendation.r_priority}
               onBlur={props.handleInput}
