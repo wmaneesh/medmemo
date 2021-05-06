@@ -118,7 +118,9 @@ function App() {
         ) : (
           <div id="parent">
             <div>
-              <h1>Capstone project has ended and MedMemo will be offline</h1>
+              <h1>
+                MedMemo is shutdown due to completing our Capstone Project
+              </h1>
             </div>
 
             {/* <MuiThemeProvider theme={themes}>
