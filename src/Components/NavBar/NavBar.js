@@ -62,7 +62,7 @@ const NavBar = (props) => {
       })
       .then((result) => {
         props.setAuthenticate(false);
-        history.push("/medmemo/");
+        history.push("/medmemo");
       });
   };
 
