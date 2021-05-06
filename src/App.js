@@ -122,6 +122,8 @@ function App() {
                 textAlign: "center",
                 margin: "0px auto",
                 display: "block",
+                top: "50%",
+                color: "rgb(51, 187, 179)",
               }}
             >
               Capstone project has ended and MedMemo will be offline
