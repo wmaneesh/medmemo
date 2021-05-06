@@ -116,7 +116,7 @@ function App() {
             />
           </Switch>
         ) : (
-          <div className={classes.root}>
+          <div id="parent">
             <div>
               <h1>Capstone project has ended and MedMemo will be offline</h1>
             </div>
