@@ -16,3 +16,12 @@
 @import "./Components/Physcian/InboxList.scss";
 @import "./components/Physcian/MessageTile.scss";
 @import "./Components/Nurse/NurseMsgTile.scss";
+
+#parent {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+  color: rgb(51, 187, 179);
+}

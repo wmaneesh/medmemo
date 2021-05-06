@@ -117,17 +117,10 @@ function App() {
           </Switch>
         ) : (
           <div className={classes.root}>
-            <h1
-              style={{
-                textAlign: "center",
-                margin: "0px auto",
-                display: "block",
-                top: "50%",
-                color: "rgb(51, 187, 179)",
-              }}
-            >
-              Capstone project has ended and MedMemo will be offline
-            </h1>
+            <div>
+              <h1>Capstone project has ended and MedMemo will be offline</h1>
+            </div>
+
             {/* <MuiThemeProvider theme={themes}>
               <CircularProgress
                 style={{ position: "fixed", top: "30%", left: "50%" }}
