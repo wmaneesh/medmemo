@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/medmemo/static/css/main.325078ba.chunk.css",
-    "main.js": "/medmemo/static/js/main.1eada6df.chunk.js",
-    "main.js.map": "/medmemo/static/js/main.1eada6df.chunk.js.map",
+    "main.js": "/medmemo/static/js/main.deeeac70.chunk.js",
+    "main.js.map": "/medmemo/static/js/main.deeeac70.chunk.js.map",
     "runtime-main.js": "/medmemo/static/js/runtime-main.5c12cad3.js",
     "runtime-main.js.map": "/medmemo/static/js/runtime-main.5c12cad3.js.map",
     "static/js/2.e8b069c3.chunk.js": "/medmemo/static/js/2.e8b069c3.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.5c12cad3.js",
     "static/js/2.e8b069c3.chunk.js",
     "static/css/main.325078ba.chunk.css",
-    "static/js/main.1eada6df.chunk.js"
+    "static/js/main.deeeac70.chunk.js"
   ]
 }
