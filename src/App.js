@@ -117,7 +117,13 @@ function App() {
           </Switch>
         ) : (
           <div className={classes.root}>
-            <h1 style={{ position: "fixed", top: "50%", left: "50%" }}>
+            <h1
+              style={{
+                textAlign: "center",
+                margin: "0px auto",
+                display: "block",
+              }}
+            >
               Capstone project has ended and MedMemo will be offline
             </h1>
             {/* <MuiThemeProvider theme={themes}>
