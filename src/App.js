@@ -119,7 +119,7 @@ function App() {
           <div id="parent">
             <div>
               <h1>
-                MedMemo is shutdown due to completing our Capstone Project
+                MedMemo will be shutodwn as our capstone project has ended.
               </h1>
             </div>
 
